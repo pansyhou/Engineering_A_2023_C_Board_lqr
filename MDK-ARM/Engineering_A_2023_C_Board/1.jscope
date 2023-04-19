@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<JScopeProject>
+    <FileVersion major="1" minor="0" />
+    <Project>
+        <Configuration>
+            <JLink>
+                <Options Connection="1" SerialNo="0" IP="" TargetDevice="STM32F407IG" TargetInterface="SWD" InterfaceSpeed="4000" />
+            </JLink>
+            <ElfFile Name="E:\New_Engineering\Engineering_A_2023_C_Board\MDK-ARM\Engineering_A_2023_C_Board\Engineering_A_2023_C_Board.axf" />
+            <DataFile Name="" />
+            <Scope>
+                <Options TimeResolutionUs="1000000" />
+            </Scope>
+        </Configuration>
+        <Windows>
+            <Graph Show="1" />
+            <Watch Show="1" />
+        </Windows>
+        <SelectedSymbols>
+            <Symbol>
+                <Options Name="left" Address="0x200000B8" Type="volatile int" Size="4" IsSigned="1" ShowAsHex="0" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="50000" MaxValue="100000" File="" Scope="1" />
+            </Symbol>
+            <Symbol>
+                <Options Name="right" Address="0x200000BC" Type="volatile int" Size="4" IsSigned="1" ShowAsHex="0" GraphColorRed="0" GraphColorGreen="255" GraphColorBlue="0" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="50000" MaxValue="100000" File="" Scope="1" />
+            </Symbol>
+        </SelectedSymbols>
+    </Project>
+</JScopeProject>

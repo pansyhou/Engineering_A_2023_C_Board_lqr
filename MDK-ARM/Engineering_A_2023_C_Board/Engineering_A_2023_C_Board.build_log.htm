@@ -1,0 +1,84 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1677195845@qq.com, 1, LIC=UJWP0-B11JP-MMP9I-TDNL4-7AGNY-2FDV7
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      Segger\JL2CM3.dll V2.99.42.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\16771\Desktop\Engineering_A_2023_C_Board (1)\MDK-ARM\Engineering_A_2023_C_Board.uvprojx
+Project File Date:  04/13/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Engineering_A_2023_C_Board'
+Note: source file '..\IMU\bsp_PWM.c' - object file renamed from 'Engineering_A_2023_C_Board\bsp_PWM.o' to 'Engineering_A_2023_C_Board\bsp_pwm_1.o'.
+compiling GimbalMotor.c...
+../Control/Inc/GimbalMotor.h(115): warning:  #1295-D: Deprecated declaration Three_Degrees_Arms_Init - give arg types
+  void Three_Degrees_Arms_Init();
+..\Control\Src\GimbalMotor.c(426): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      power=(0.0-spta->flexible)*power;
+..\Control\Src\GimbalMotor.c(319): warning:  #177-D: variable "pos_lock"  was declared but never referenced
+  static int pos_lock;
+..\Control\Src\GimbalMotor.c(320): warning:  #177-D: variable "pos"  was declared but never referenced
+  static int pos[2];
+..\Control\Src\GimbalMotor.c(334): warning:  #177-D: variable "Sucker_Lock"  was declared but never referenced
+  static bool_t Sucker_Lock = 0;//
+..\Control\Src\GimbalMotor.c(335): warning:  #177-D: variable "LastJoint_LockPosition"  was declared but never referenced
+  static int32_t LastJoint_LockPosition[2];
+..\Control\Src\GimbalMotor.c(336): warning:  #550-D: variable "Pitch_LockPosition"  was set but never used
+  static int32_t Pitch_LockPosition;
+..\Control\Src\GimbalMotor.c(337): warning:  #550-D: variable "Roll_LockPosition"  was set but never used
+  static int32_t Roll_LockPosition;
+..\Control\Src\GimbalMotor.c(338): warning:  #550-D: variable "Yaw_LockPosition"  was set but never used
+  static fp32 Yaw_LockPosition;
+..\Control\Src\GimbalMotor.c(339): warning:  #177-D: variable "LastJointGain"  was declared but never referenced
+  static int32_t LastJointGain=2;
+..\Control\Src\GimbalMotor.c(340): warning:  #550-D: variable "speed"  was set but never used
+  static int speed=0;
+..\Control\Src\GimbalMotor.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=53016 RO-data=3192 RW-data=720 ZI-data=49496  
+FromELF: creating hex file...
+"Engineering_A_2023_C_Board\Engineering_A_2023_C_Board.axf" - 0 Error(s), 11 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Engineering_A_2023_C_Board
+  C:/Users/16771/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/16771/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Engineering_A_2023_C_Board"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Engineering_A_2023_C_Board.elf">
+				<Option output="E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Engineering_A_2023_C_Board.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F407xx"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engineering_A_2023_C_Board.elf"/>
+					<CompileFile command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Engineering_A_2023_C_Board.elf/fast">
+				<Option output="E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Engineering_A_2023_C_Board.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F407xx"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engineering_A_2023_C_Board.elf/fast"/>
+					<CompileFile command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Application/mingw64/bin/mingw32-make.exe -f &quot;E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc/FreeRTOSConfig.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc/can.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc/dma.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc/gpio.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc/main.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc/stm32f4xx_hal_conf.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc/stm32f4xx_it.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Inc/usart.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/can.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/dma.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/freertos.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/gpio.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/main.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/stm32f4xx_hal_msp.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/stm32f4xx_hal_timebase_tim.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/stm32f4xx_it.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/syscalls.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/system_stm32f4xx.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Core/Src/usart.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Device/ST/STM32F4xx/License.md">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/CMSIS/LICENSE.txt">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/License.md">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/atomic.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/list.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/STM32F407IGHx_FLASH.ld">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/startup/startup_stm32f407xx.s">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="E:/New_Engineering/Engineering_A_2023_C_Board/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

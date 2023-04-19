@@ -1,0 +1,5 @@
+E:\Application\Jetbrain\apps\CLion\ch-0\222.3739.54\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/Application/mingw64/bin/mingw32-make.exe "-DCMAKE_C_COMPILER=E:/Application/10 2021.10/bin/arm-none-eabi-gcc.exe" "-DCMAKE_CXX_COMPILER=E:/Application/10 2021.10/bin/arm-none-eabi-g++.exe" -G "CodeBlocks - MinGW Makefiles" -S E:\New_Engineering\Engineering_A_2023_C_Board -B E:\New_Engineering\Engineering_A_2023_C_Board\cmake-build-debug
+-- Minimal optimization, debug info included
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "bsp_usb.h": "c",
+        "bsp_can_fifo.h": "c",
+        "fifo.h": "c"
+    }
+}

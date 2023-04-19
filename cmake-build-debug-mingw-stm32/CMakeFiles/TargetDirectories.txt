@@ -1,0 +1,3 @@
+C:/Users/16771/Desktop/Engineering_A_2023_C_Board (1)/cmake-build-debug-mingw-stm32/CMakeFiles/Engineering_A_2023_C_Board.elf.dir
+C:/Users/16771/Desktop/Engineering_A_2023_C_Board (1)/cmake-build-debug-mingw-stm32/CMakeFiles/edit_cache.dir
+C:/Users/16771/Desktop/Engineering_A_2023_C_Board (1)/cmake-build-debug-mingw-stm32/CMakeFiles/rebuild_cache.dir

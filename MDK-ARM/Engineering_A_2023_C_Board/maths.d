@@ -1,0 +1,13 @@
+engineering_a_2023_c_board\maths.o: ..\ACE-ECF\Algorithm\src\maths.c
+engineering_a_2023_c_board\maths.o: ../ACE-ECF/Algorithm/inc/maths.h
+engineering_a_2023_c_board\maths.o: ../ACE-ECF/Algorithm/inc/struct_typedef.h
+engineering_a_2023_c_board\maths.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+engineering_a_2023_c_board\maths.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
+engineering_a_2023_c_board\maths.o: ../Drivers/CMSIS/Include/core_cm4.h
+engineering_a_2023_c_board\maths.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+engineering_a_2023_c_board\maths.o: ../Drivers/CMSIS/Include/cmsis_version.h
+engineering_a_2023_c_board\maths.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+engineering_a_2023_c_board\maths.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+engineering_a_2023_c_board\maths.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+engineering_a_2023_c_board\maths.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+engineering_a_2023_c_board\maths.o: ../ACE-ECF/Algorithm/inc/list_of_function.h

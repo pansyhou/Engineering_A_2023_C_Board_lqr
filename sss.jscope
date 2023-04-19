@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<JScopeProject>
+    <FileVersion major="1" minor="1" />
+    <Project>
+        <Configuration>
+            <JLink>
+                <Options Connection="1" IsRTTSession="0" IsRTTWithTimeStamp="0" SamplingPeriod="100" SerialNo="0" JTAG_IRPre="0" JTAG_DRPre="0" IP="" TargetDevice="Cortex-M4" TargetInterface="SWD" InterfaceSpeed="4000" />
+            </JLink>
+            <ElfFile Name="E:\New_Engineering\Engineering_A_2023_C_Board\MDK-ARM\Engineering_A_2023_C_Board\Engineering_A_2023_C_Board.axf" />
+            <Scope>
+                <Options TimeResolutionUs="1000000" />
+            </Scope>
+        </Configuration>
+        <Windows>
+            <Graph Show="1" />
+            <Watch Show="1" />
+        </Windows>
+        <SelectedSymbols>
+            <Symbol>
+                <Options Name="Encode_Record_Val" Address="0x20006436" Type="int" TypeID="12" Size="4" GraphColorRed="255" GraphColorGreen="0" GraphColorBlue="0" YMinSampled="-261978" YMaxSampled="5296" YAvgSampled="-22810" Offset="4" ShowInGraph="1" ACCoupling="0" YOffset="0" IsAutoConfig="0" YResolution="100000" MaxValue="2147483647" File="" Scope="1" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="Encode_Record_Val" Address="0x20006400" Type="int" TypeID="12" Size="4" GraphColorRed="0" GraphColorGreen="0" GraphColorBlue="255" YMinSampled="-220618" YMaxSampled="20234" YAvgSampled="-5872.96" Offset="8" ShowInGraph="1" ACCoupling="0" YOffset="0" IsAutoConfig="0" YResolution="100000" MaxValue="2147483647" File="" Scope="1" DrawStyle="0" />
+            </Symbol>
+        </SelectedSymbols>
+    </Project>
+</JScopeProject>
