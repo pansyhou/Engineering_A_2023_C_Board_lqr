@@ -71,6 +71,7 @@ void Error_Handler(void);
 #define INT1_GYRO_GPIO_Port GPIOC
 #define CS1_GYRO_Pin GPIO_PIN_0
 #define CS1_GYRO_GPIO_Port GPIOB
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

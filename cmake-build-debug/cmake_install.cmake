@@ -1,4 +1,4 @@
-# Install script for directory: E:/New_Engineering/Engineering_A_2023_C_Board
+# Install script for directory: C:/Users/16771/Desktop/Engineering_A_2023_C_Board (1)
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/New_Engineering/Engineering_A_2023_C_Board/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/16771/Desktop/Engineering_A_2023_C_Board (1)/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

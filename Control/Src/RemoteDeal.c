@@ -6,16 +6,37 @@
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐ ┌───┬───┬───┐ ┌───┬───┬───┬───┐
  * │~ `│! 1│@ 2│# 3│$ 4│% 5│^ 6│& 7│* 8│( 9│) 0│_ -│+ =│ BacSp │ │Ins│Hom│PUp│ │N L│ / │ * │ - │
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤ ├───┼───┼───┤ ├───┼───┼───┼───┤
- * │ Tab │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │{ [│} ]│ | \ │ │Del│End│PDn│ │ 7 │ 8 │ 9 │   │
+ * │ Tab │ Q │ W │ E │ R │   │   │ U │ I │ O │ P │{ [│} ]│ | \ │ │Del│End│PDn│ │ 7 │ 8 │ 9 │   │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤ └───┴───┴───┘ ├───┼───┼───┤ + │
- * │ Caps │ A │ S │ D │ F │ G │ H │ J │ K │ L │: ;│" '│ Enter  │               │ 4 │ 5 │ 6 │   │
+ * │      │ A │ S │ D │ F │ G │   │ J │ K │ L │: ;│" '│ Enter  │               │ 4 │ 5 │ 6 │   │
  * ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤     ┌───┐     ├───┼───┼───┼───┤
- * │ Shift  │ Z │ X │ C │ V │ B │ N │ M │< ,│> .│? /│  Shift   │     │ ↑ │     │ 1 │ 2 │ 3 │   │
+ * │ Shift  │ Z │ X │ C │ V │ B │   │ M │< ,│> .│? /│  Shift   │     │ ↑ │     │ 1 │ 2 │ 3 │   │
  * ├─────┬──┴─┬─┴──┬┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤ ┌───┼───┼───┐ ├───┴───┼───┤ E││
  * │ Ctrl│    │Alt │         Space         │ Alt│    │    │Ctrl│ │ ← │ ↓ │ → │ │   0   │ . │←─┘│
  * └─────┴────┴────┴───────────────────────┴────┴────┴────┴────┘ └───┴───┴───┘ └───────┴───┴───┘
  */
-
+ //total 16 keys
+//机械臂需要：一键到位、微操、一键归零
+//图传需要：跟随、自己动、看储矿
+//救援抓需要：一键到位
+//整车：只用wasd或者键鼠
+//储矿需要翻
+//#define KEY_PRESSED_OFFSET_W       ((uint16_t)1 << 0)     //控制底盘
+//#define KEY_PRESSED_OFFSET_S       ((uint16_t)1 << 1)
+//#define KEY_PRESSED_OFFSET_A       ((uint16_t)1 << 2)
+//#define KEY_PRESSED_OFFSET_D       ((uint16_t)1 << 3)
+//#define KEY_PRESSED_OFFSET_SHIFT   ((uint16_t)1 << 4)     //加速用
+//#define KEY_PRESSED_OFFSET_CTRL    ((uint16_t)1 << 5)     //减速用
+//#define KEY_PRESSED_OFFSET_Q       ((uint16_t)1 << 6)     //切换模式
+//#define KEY_PRESSED_OFFSET_E       ((uint16_t)1 << 7)
+//#define KEY_PRESSED_OFFSET_R       ((uint16_t)1 << 8)
+//#define KEY_PRESSED_OFFSET_F       ((uint16_t)1 << 9)
+//#define KEY_PRESSED_OFFSET_G       ((uint16_t)1 << 10)    //救援切换模式
+//#define KEY_PRESSED_OFFSET_Z       ((uint16_t)1 << 11)
+//#define KEY_PRESSED_OFFSET_X       ((uint16_t)1 << 12)
+//#define KEY_PRESSED_OFFSET_C       ((uint16_t)1 << 13)
+//#define KEY_PRESSED_OFFSET_V       ((uint16_t)1 << 14)
+//#define KEY_PRESSED_OFFSET_B       ((uint16_t)1 << 15)
 #include "RemoteDeal.h"
 #include "maths.h"
 /*遥控结构体*/

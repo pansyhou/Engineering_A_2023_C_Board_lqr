@@ -2,10 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ACE-ECF" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ACE-ECF/Algorithm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ACE-ECF/Bsp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ACE-ECF/Control" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Engineering_A_2023_C_Board--1-" vcs="Git" />
   </component>
 </project>

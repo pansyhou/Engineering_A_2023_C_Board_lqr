@@ -81,7 +81,7 @@ typedef __packed struct
 }Lift_UP_t;
 
 
-typedef __packed struct
+typedef  struct
 {
     Motor_t Pitch_Motor;//pitch轴/x轴3508电机
     Motor_t Roll_Motor; //roll轴/z轴2006/3508电机
@@ -90,8 +90,13 @@ typedef __packed struct
     Motor_t Last_Joint[2];    //最后一个自由度的两个2006
     Motor_t Forward_Motor[2];    //前伸电机x2 3508电机
     bool_t Suker_state; //吸盘状态
-    bool_t is_Auto_Mode;   //机械臂模式 自动/手动
     Encoder_t *(*Get_Encoder)(uint8_t);
+    float l1;
+    float l2;
+    float l3;
+    float Pitch1_Angle;
+    float Pitch2_Angle;
+    float l3ToHorizontalPlane_Angle;
 } Three_D_Arm_t;
 
 typedef __packed struct{

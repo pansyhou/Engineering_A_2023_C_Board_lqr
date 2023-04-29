@@ -40,7 +40,7 @@ engineering_a_2023_c_board\bsp_pwm.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f
 engineering_a_2023_c_board\bsp_pwm.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 engineering_a_2023_c_board\bsp_pwm.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 engineering_a_2023_c_board\bsp_pwm.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
-engineering_a_2023_c_board\bsp_pwm.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/freertos.h
+engineering_a_2023_c_board\bsp_pwm.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 engineering_a_2023_c_board\bsp_pwm.o: ../Core/Inc/FreeRTOSConfig.h
 engineering_a_2023_c_board\bsp_pwm.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 engineering_a_2023_c_board\bsp_pwm.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

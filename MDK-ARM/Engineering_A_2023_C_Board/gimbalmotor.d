@@ -83,3 +83,13 @@ engineering_a_2023_c_board\gimbalmotor.o: ../IMU/QuaternionEKF.h
 engineering_a_2023_c_board\gimbalmotor.o: ../IMU/user_lib.h
 engineering_a_2023_c_board\gimbalmotor.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 engineering_a_2023_c_board\gimbalmotor.o: ../IMU/bsp_dwt.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Control/Inc/SYSInit.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Core/Inc/dma.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Core/Inc/usart.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Core/Inc/gpio.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Control/Inc/RemoteDeal.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Bsp/Inc/bsp_dr16.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Bsp/Inc/ECF_BspConfig.h
+engineering_a_2023_c_board\gimbalmotor.o: ../ACE-ECF/Algorithm/inc/filter.h
+engineering_a_2023_c_board\gimbalmotor.o: ../Task/Inc/Detect_Task.h

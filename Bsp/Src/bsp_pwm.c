@@ -43,7 +43,7 @@
  *  */
 
 #include "bsp_pwm.h"
-#include "freertos.h"
+#include "FreeRTOS.h"
 #include "queue.h"
 #include "semphr.h"
 #include "task.h"

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ACE-ECF/Algorithm/inc/maths.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/ACE-ECF/Algorithm/src/maths.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Control/Inc/referee.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Task/Src/Gimbal_Task.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Task/Src/fsm.c" charset="GBK" />
+    <file url="mock:///filter.c" charset="GBK" />
   </component>
 </project>

@@ -1,6 +1,11 @@
 #ifndef __SYS_INIT_H
 #define __SYS_INIT_H
 
+//global variable
+#define ARM_L1_LENTH 23.0f
+#define ARM_L2_LENTH 23.0f
+#define INIT_ARM_L3_LENTH 23.0f
+
 
 /*  系统头文件 */
 #include <stdlib.h>

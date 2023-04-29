@@ -28,7 +28,8 @@
 #include "bsp_pwm.h"
 #include "pid.h"
 #include "imu_task.h"
-
+#include "SYSInit.h"
+#include "arm_math.h"
 Lift_UP_t Lift_t;
 Three_D_Arm_t TD_t;
 Clip_Module_t Clip_t;
@@ -205,8 +206,16 @@ void Gimbal_Motor_Init(void) {
     Grasp.TD_t = &TD_t;
     // 初始化吸盘状态
     TD_t.Suker_state = 0;
-    // 初始化自动还是手动模式
-    TD_t.is_Auto_Mode = 0;
+
+    //TODO:
+    //init arm length
+    TD_t.l1 = ARM_L1_LENTH;
+    TD_t.l2 = ARM_L2_LENTH;
+    TD_t.l3 = INIT_ARM_L3_LENTH;
+    //init arm angle
+    TD_t.Pitch1_Angle = 0.0f;
+    TD_t.Pitch2_Angle = 0.0f;
+    TD_t.l3ToHorizontalPlane_Angle = 0.0f;
 
 
     //初始化多圈编码器 Initialize the multiturn encoder
@@ -350,14 +359,27 @@ static int speed=0;
 float k1 = -0.5f;
 float k2 = 1.0f;
 void Arms_Drive(Three_D_Arm_t *Arm_t, int16_t roll, int16_t pitch, int16_t yaw, int16_t joint , int16_t  forward ,bool_t update_sucker_state) {
-		fp32 see_T_yaw,see_current_yaw;
-    if (update_sucker_state != Arm_t->Suker_state) {
-        if (update_sucker_state == 1) {
-            //输入上升沿时toggle lock
-            Arm_t->Suker_state = 1 - Arm_t->Suker_state;
-            // wirte pin
-        }
-    }
+    fp32 see_T_yaw,see_current_yaw;
+//    if (update_sucker_state != Arm_t->Suker_state) {
+//        if (update_sucker_state == 1) {
+//            //输入上升沿时toggle lock
+//            Arm_t->Suker_state = 1 - Arm_t->Suker_state;
+//            // wirte pin
+//        }
+//    }
+
+    //cal arccos for pitch
+    float l1_square ;
+    float l2_square ;
+    float l3_square ;
+    arm_power_f32(&Arm_t->l1, 1, &l1_square);
+    arm_power_f32(&Arm_t->l2, 1, &l2_square);
+    arm_power_f32(&Arm_t->l3, 1, &l3_square);
+
+    Arm_t->Pitch1_Angle = acosf((l1_square + l3_square - l2_square) / (2 * Arm_t->l1 * Arm_t->l2)) + Arm_t->l3ToHorizontalPlane_Angle;
+    Arm_t->Pitch2_Angle = acosf((l1_square + l2_square - l3_square) / (2 * Arm_t->l1 * Arm_t->l2));
+    //TODO:output
+
 
 	PidCalculate(&Arm_t->Forward_Motor[0].SPID, forward*(-10), Arm_t->Forward_Motor[0].Encoder->Speed[1]);
 
@@ -392,6 +414,8 @@ void Arms_Drive(Three_D_Arm_t *Arm_t, int16_t roll, int16_t pitch, int16_t yaw, 
    see_current_yaw = see_T_yaw / 0.741f * 10000;
    Arm_t->Yaw_Motor.SPID.out = (see_current_yaw - 128.3507f) / 0.7778f;
    Arm_t->Yaw_Motor.SPID.out = abs_limit(Arm_t->Yaw_Motor.SPID.out,29000);
+
+
 //    speed=Arm_t->Roll_Motor.Encoder->Speed[1];
 //    MotorVelocityCurve(&Arm_t->Roll_Motor);
     //    CAN1_C620_OR_C610_201_TO_204_SendMsg(Arm_t->Forward_Motor[0].SPID.out, 0, 0, 0);
