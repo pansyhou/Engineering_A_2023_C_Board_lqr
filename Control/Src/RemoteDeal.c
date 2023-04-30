@@ -41,8 +41,8 @@
 #include "maths.h"
 /*遥控结构体*/
 REMOTE_t REMOTE;
-/*遥控死区*/
-static const uint8_t DeadZone = 10;
+///*遥控死区*/
+//static const uint8_t DeadZone = 10;
 
 /*************************************************************************************************
 *名称:	Get_RemoteDeal_Point
@@ -68,11 +68,7 @@ static void Remote_Data_Zero(void)
     RC_DataReload();//遥控器数据清零
 
     /*状态值初始化 全部暂停*/
-    REMOTE.state.Grasp_Up = 0; //
-    REMOTE.state.Translation = 1;  //
-    REMOTE.state.Telescoping = 0;
-    REMOTE.state.Clap = 0;
-    REMOTE.state.Flip = 0;
+    REMOTE.state.Global_Status = 0;
 }
 
 /*************************************************************************************************
@@ -128,82 +124,115 @@ static void Rc_Deal(void)
 *************************************************************************************************/
 static void Key_Mouse_Deal(void)
 {
-//    uint16_t key =REMOTE.RC_ctrl->key.v;
-//    int16_t ws[2]={0,0};
-//    int16_t ad[2]={0,0};
-//
-//    /*************************************底盘前后*********************************/
-//    if (key & KEY_PRESSED_OFFSET_W)
-//    {
-//        if (key & KEY_PRESSED_OFFSET_SHIFT && key & KEY_PRESSED_OFFSET_W)
-//        {
-//            ws[0]=6000;
-//        }
-//        else if(key & KEY_PRESSED_OFFSET_CTRL && key & KEY_PRESSED_OFFSET_W)
-//        {
-//            ws[0]=200;
-//        }
-//        else
-//        {
-//            ws[0]=3000;
-//        }
-//    }
-//    if (key & KEY_PRESSED_OFFSET_S)
-//    {
-//        if (key & KEY_PRESSED_OFFSET_SHIFT && key & KEY_PRESSED_OFFSET_S)
-//        {
-//            ws[1]=-6000;
-//        }
-//        else if(key & KEY_PRESSED_OFFSET_CTRL && key & KEY_PRESSED_OFFSET_S)
-//        {
-//            ws[1]=-200;
-//        }
-//        else
-//        {
-//            ws[1]=-3000;
-//        }
-//    }
-//    REMOTE.RC_ctrl->key.kv0=ws[0]+ws[1];
-//
-//
-//    /**************************************底盘左右*********************************/
-//    if (key & KEY_PRESSED_OFFSET_A)
-//    {
-//        if (key & KEY_PRESSED_OFFSET_SHIFT && key & KEY_PRESSED_OFFSET_A)
-//        {
-//            ad[0]=-6000;
-//        }
-//        else if(key & KEY_PRESSED_OFFSET_CTRL && key & KEY_PRESSED_OFFSET_A)
-//        {
-//            ad[0]=-200;
-//        }
-//        else
-//        {
-//            ad[0]=-3000;
-//        }
-//    }
-//    if (key & KEY_PRESSED_OFFSET_D)
-//    {
-//        if (key & KEY_PRESSED_OFFSET_SHIFT && key & KEY_PRESSED_OFFSET_D)
-//        {
-//            ad[1]=6000;
-//        }
-//        else if(key & KEY_PRESSED_OFFSET_CTRL && key & KEY_PRESSED_OFFSET_D)
-//        {
-//            ad[1]=200;
-//        }
-//        else
-//        {
-//            ad[1]=3000;
-//        }
-//    }
-//    REMOTE.RC_ctrl->key.kv1=ad[0]+ad[1];
-//
-//    /*************************************鼠标X轴************************************/
-//    REMOTE.RC_ctrl->mouse.x *= 5.0f;
-//    /**************************************鼠标Y轴***********************************/
-//    REMOTE.RC_ctrl->mouse.y *= 5.0f;
-//
+
+    uint16_t key =REMOTE.RC_ctrl->key.v;
+    int16_t ws[2]={0,0};
+    int16_t ad[2]={0,0};
+
+    //整车状态切换
+    if (key & KEY_PRESSED_OFFSET_G) {
+        REMOTE.state.Global_Status = 1 - REMOTE.state.Global_Status;
+    }
+
+    /*************************************底盘前后*********************************/
+    if (key & KEY_PRESSED_OFFSET_W)
+    {
+        //底盘独立，可以控制速度
+        if (REMOTE.state.Global_Status == Follow_Independent) {
+            if (key & KEY_PRESSED_OFFSET_SHIFT && key & KEY_PRESSED_OFFSET_W)
+            {
+                ws[0]=6000;
+            }
+            else if(key & KEY_PRESSED_OFFSET_CTRL && key & KEY_PRESSED_OFFSET_W)
+            {
+                ws[0]=200;
+            }
+            else
+            {
+                ws[0]=3000;
+            }
+        }
+        //底盘其他模式
+        else{
+            ws[0]=3000;
+        }
+
+    }
+    if (key & KEY_PRESSED_OFFSET_S)
+    {
+        if (REMOTE.state.Global_Status == Follow_Independent){
+            if (key & KEY_PRESSED_OFFSET_SHIFT && key & KEY_PRESSED_OFFSET_S)
+            {
+                ws[1]=-6000;
+            }
+            else if(key & KEY_PRESSED_OFFSET_CTRL && key & KEY_PRESSED_OFFSET_S)
+            {
+                ws[1]=-200;
+            }
+            else
+            {
+                ws[1]=-3000;
+            }
+        }
+        else{
+            ws[1]=-3000;
+        }
+
+    }
+    REMOTE.RC_ctrl->key.kv0=ws[0]+ws[1];
+
+
+    /**************************************底盘左右*********************************/
+    if (key & KEY_PRESSED_OFFSET_A)
+    {
+        if (REMOTE.state.Global_Status == Follow_Independent){
+            if (key & KEY_PRESSED_OFFSET_SHIFT && key & KEY_PRESSED_OFFSET_A)
+            {
+                ad[0]=-6000;
+            }
+            else if(key & KEY_PRESSED_OFFSET_CTRL && key & KEY_PRESSED_OFFSET_A)
+            {
+                ad[0]=-200;
+            }
+            else
+            {
+                ad[0]=-3000;
+            }
+        }
+        else
+        {
+            ad[0]=-3000;
+        }
+    }
+
+    if (key & KEY_PRESSED_OFFSET_D)
+    {
+        if (REMOTE.state.Global_Status == Follow_Independent){
+            if (key & KEY_PRESSED_OFFSET_SHIFT && key & KEY_PRESSED_OFFSET_D)
+            {
+                ad[1]=6000;
+            }
+            else if(key & KEY_PRESSED_OFFSET_CTRL && key & KEY_PRESSED_OFFSET_D)
+            {
+                ad[1]=200;
+            }
+            else
+            {
+                ad[1]=3000;
+            }
+        }
+        else{
+            ad[1]=3000;
+        }
+
+    }
+    REMOTE.RC_ctrl->key.kv1=ad[0]+ad[1];
+
+    /*************************************鼠标X轴************************************/
+    REMOTE.RC_ctrl->mouse.x *= 5.0f;
+    /**************************************鼠标Y轴***********************************/
+    REMOTE.RC_ctrl->mouse.y *= 5.0f;
+
 //    /*******************************自动夹取********************************/
 //    if (key & KEY_PRESSED_OFFSET_Q)
 //    {
@@ -324,16 +353,16 @@ static void Key_Mouse_Deal(void)
 //						REMOTE.state.Flip = 1;  //上装复位关闭
 //				}
 //    }
-//
-//    /*限制幅度处理*/
+
+    /*限制幅度处理*/
 //    REMOTE.RC_ctrl->key.kv0 = limit(REMOTE.RC_ctrl->key.kv0, 660, -660);
 //    REMOTE.RC_ctrl->key.kv1 = limit(REMOTE.RC_ctrl->key.kv1, 660, -660);
 //    REMOTE.RC_ctrl->mouse.x = limit(REMOTE.RC_ctrl->mouse.x, 660, -660);
 //    REMOTE.RC_ctrl->mouse.y = limit(REMOTE.RC_ctrl->mouse.y, 660, -660);
-//    /*滤波处理*/
+    /*滤波处理*/
 //    First_Order(&REMOTE.KM_X, REMOTE.RC_ctrl->key.kv0); //底盘左右
 //    First_Order(&REMOTE.KM_Y, REMOTE.RC_ctrl->key.kv1); //底盘前后
-//    // First_Order(&REMOTE.KM_Z, REMOTE.RC_ctrl->mouse.x); //鼠标x轴
+    // First_Order(&REMOTE.KM_Z, REMOTE.RC_ctrl->mouse.x); //鼠标x轴
 
 
 }
@@ -367,7 +396,7 @@ void Remote_Data_Deal(void)
 //    }
 
 //    _s1 = REMOTE.RC_ctrl->rc.s1;
-	if(REMOTE.RC_ctrl->rc.s1==3&&REMOTE.RC_ctrl->rc.s2==3)
+	if(REMOTE.RC_ctrl->rc.s1==1&&REMOTE.RC_ctrl->rc.s2==1)
 	{
 		Key_Mouse_Deal();
         detect_hook(DBUS_TOE);//记录在线时间

@@ -133,7 +133,7 @@ void CAN_A2B_RC_Send(void)
 
     ECF_CAN_Send_Msg_FIFO(&hcan2,0x100, RC_Data1, 8);
 	
-		vTaskDelay(2);
+    vTaskDelay(2);
 	
     RC_Data2[0] = Gimbal.RC->RC_ctrl->rc.ch[4] >> 8;
     RC_Data2[1] = (uint8_t)Gimbal.RC->RC_ctrl->rc.ch[4] ;

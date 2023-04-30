@@ -22,5 +22,10 @@ static void Mining_Prepare(void);
 static void Mining_State(void);
 static void Mining_bhv(void);
 
+
+static void KeyBoard_Prepare(void);
+static void KeyBoard_State(void);
+static void KeyBoard_bhv(void);
+
 #endif // !__GIMBAL_FSM_H
 

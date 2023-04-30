@@ -78,7 +78,7 @@ typedef struct{
 #ifdef  DR16_LOST_DETECT_ENABLE
 
 uint32_t chassis_rc_lost_time(void);
-void rc_lost_time_refresh();
+void rc_lost_time_refresh(void);
 
 #endif
 

@@ -389,6 +389,11 @@
               <FileType>2</FileType>
               <FilePath>startup_stm32f407xx.s</FilePath>
             </File>
+            <File>
+              <FileName>Engineering_A_2023_C_Board.map</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Engineering_A_2023_C_Board\Engineering_A_2023_C_Board.map</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

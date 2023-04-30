@@ -26,6 +26,8 @@ typedef struct _fsm
     State_t (*State_Table)[State_Column];                   //状态参数表
 }FSM_t;
 
+
+
 /*状态机处理函数*/
 void FSM_Deal(FSM_t *fsm, uint8_t s1, uint8_t s2);
 /*状态变更函数*/

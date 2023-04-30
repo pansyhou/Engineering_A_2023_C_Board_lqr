@@ -51,7 +51,7 @@ uint32_t chassis_rc_lost_time(void)
 }
 
 
-void rc_lost_time_refresh()
+void rc_lost_time_refresh(void)
 {
     /* 当接收到数据时，；刷新失联倒计时   xTaskGetTickCountFromISR  xTaskGetTickCount  */
     RCLostTime = xTaskGetTickCount() + REMOTE_LOST_TIME;

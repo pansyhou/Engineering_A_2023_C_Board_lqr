@@ -6,6 +6,8 @@
 #define ARM_L2_LENTH 23.0f
 #define INIT_ARM_L3_LENTH 23.0f
 
+#define PWM_CMP_UPPER_LIMIT 2500
+#define PWM_CMP_LOWER_LIMIT 500
 
 /*  系统头文件 */
 #include <stdlib.h>
