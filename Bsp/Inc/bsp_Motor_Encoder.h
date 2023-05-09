@@ -45,10 +45,10 @@ typedef __packed struct {
     float Total_Radian; //记录的弧度
 
     uint8_t Init_Flag;
-    int16_t Speed[2];    //0为旧速度，1为新速度
-    int16_t AccSpeed;    //加速度
-    int16_t position;    //未处理的Can原始码盘
-    int16_t last_position;    //未处理的上次的Can原始码盘
+    int32_t Speed[2];    //0为旧速度，1为新速度
+    int32_t AccSpeed;    //加速度
+    int32_t position;    //未处理的Can原始码盘
+    int32_t last_position;    //未处理的上次的Can原始码盘
     int16_t lap_encoder;      //编码器单圈码盘值（8192=12bit）
     Encoder_Type_e Encoder_Type;//编码器种类
     bool_t Block_Detect_Enable; //堵转检测开启否
@@ -69,11 +69,12 @@ extern Encoder_t *Encoder_Init(Encoder_Type_e Encoder_Type,uint8_t ch);
 
 
 /*CAN返回码盘值处理*/
-extern void CAN_DATA_Encoder_Deal( int16_t position, int16_t speed,  uint8_t Encoder_Num);
+extern void CAN_DATA_Encoder_Deal( int32_t position, int16_t speed,  uint8_t Encoder_Num);
 
 /*码盘值数值清零处理*/
 extern void EncoderValZero(Encoder_t *Encoder);
 
-extern void Briter_Encoder_Code_Set(uint8_t CAN_STD_ID, Briter_Encoder_Code_e code, uint32_t data);
+extern void Briter_Encoder_Code_Set(int16_t CAN_STD_ID, Briter_Encoder_Code_e code,uint32_t data);
+
 
 #endif

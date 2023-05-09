@@ -1,3 +1,0 @@
-/media/windows/Users/16771/Desktop/Engineering_A_2023_C_Board (1)/cmake-build-debug-armgnu/CMakeFiles/Engineering_A_2023_C_Board.elf.dir
-/media/windows/Users/16771/Desktop/Engineering_A_2023_C_Board (1)/cmake-build-debug-armgnu/CMakeFiles/edit_cache.dir
-/media/windows/Users/16771/Desktop/Engineering_A_2023_C_Board (1)/cmake-build-debug-armgnu/CMakeFiles/rebuild_cache.dir

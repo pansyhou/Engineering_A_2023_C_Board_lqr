@@ -69,6 +69,9 @@ void MotorDataDeal(CAN_RxHeaderTypeDef *header, uint8_t *data) {
       * 9 yaw6020
       */
     switch (header->StdId) {
+        case Pitch_Motor_Encoder_ID:{
+            CAN_DATA_Encoder_Deal(((int32_t)data[3]|(int32_t)data[4]<<8|(int32_t)data[5]<<16|(int32_t)data[6]<<24),0,9);
+        } break ;
             //    1-2 前伸
         case CAN_M3508_MOTOR1_ID://
         {
@@ -212,6 +215,8 @@ void Gimbal_Motor_Init(void) {
 
     TD_t.Forward_Motor.Encoder = Encoder_Init(M3508, 1);
 
+		TD_t.Pitch_Motor_Encoder = Encoder_Init(GM6020, 9);
+
     //pitch motor speed pid init
     PidInit(&TD_t.Pitch_Motor.SPID, Spid[2][0], Spid[2][1], Spid[2][2], Integral_Limit | Output_Limit);
     PidInitMode(&TD_t.Pitch_Motor.SPID, Integral_Limit, 200, 200);
@@ -296,12 +301,16 @@ void Arms_Drive(Three_D_Arm_t *Arm_t, int16_t roll, int16_t pitch, int16_t yaw, 
     arm_power_f32(&Arm_t->l2, 1, &l2_square);
     arm_power_f32(&Arm_t->l3, 1, &l3_square);
 
-    Arm_t->Pitch1_Angle = acosf((l1_square + l3_square - l2_square) / (2 * Arm_t->l1 * Arm_t->l2)) + Arm_t->l3ToHorizontalPlane_Angle;
+    Arm_t->Pitch1_Angle = acosf((l1_square + l3_square - l2_square) / (2 * Arm_t->l1 * Arm_t->l3)) + Arm_t->l3ToHorizontalPlane_Angle;
     Arm_t->Pitch2_Angle = acosf((l1_square + l2_square - l3_square) / (2 * Arm_t->l1 * Arm_t->l2));
     //TODO:output
+    //TODO:还没加入角度为负的时候
+    //也是要算出来他角度然后180-他
 
 
 	PidCalculate(&Arm_t->Forward_Motor.SPID, forward*(-10), Arm_t->Forward_Motor.Encoder->Speed[1]);
+
+
 
     //控制横移部分
 //    PidCalculate(&Arm_t->Traverse_Motor.SPID, traverse * 200, Arm_t->Traverse_Motor.Encoder->Speed[1]);
@@ -323,7 +332,7 @@ void Arms_Drive(Three_D_Arm_t *Arm_t, int16_t roll, int16_t pitch, int16_t yaw, 
                                  Arm_t->Roll_Motor.Encoder->Speed[1]);
 
 //    if(yaw!=0) Yaw_LockPosition  += yaw / 660.0f * 8192.0f / 360.0f * 4.0f;
-    if(yaw!=0) Arm_t->Yaw_LockPosition  = Arm_t->Roll_Motor.Encoder->Encode_Record_Val+yaw ;
+    if(yaw!=0) Arm_t->Yaw_LockPosition  = Arm_t->Yaw_Motor.Encoder->Encode_Record_Val+yaw ;
 
     motor_position_speed_control(&Arm_t->Yaw_Motor.SPID,
                                  &Arm_t->Yaw_Motor.PPID,
@@ -343,8 +352,9 @@ void Arms_Drive(Three_D_Arm_t *Arm_t, int16_t roll, int16_t pitch, int16_t yaw, 
     CAN1_C620_OR_C610_205_TO_208_SendMsg(Arm_t->Pitch_Motor.SPID.out, Arm_t->Roll_Motor.SPID.out, Arm_t->Yaw_Motor.SPID.out, 0);
     CAN1_GM6020_5_TO_8_SendMsg(Arm_t->Yaw_Motor.SPID.out, 0, 0, 0);
 
+
     //pwm输出
-    Arm_t->SecondPitch_Pwm_Cmp+=joint/60;
+    Arm_t->SecondPitch_Pwm_Cmp+=joint/132;
     if (Arm_t->SecondPitch_Pwm_Cmp>PWM_CMP_UPPER_LIMIT)Arm_t->SecondPitch_Pwm_Cmp=PWM_CMP_UPPER_LIMIT;
     else if(Arm_t->SecondPitch_Pwm_Cmp<PWM_CMP_LOWER_LIMIT)Arm_t->SecondPitch_Pwm_Cmp=PWM_CMP_LOWER_LIMIT;
     __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, Arm_t->SecondPitch_Pwm_Cmp);
@@ -358,75 +368,147 @@ void Three_Degrees_Arms_Init() {
 }
 
 
+/*
+ * 两杆机械臂控制方式有很多，目前想到的三种方法，都有一定的缺陷和优点
+ * 1.传统电机控制权交给操作手（优点：不容易炸，其他方法容易算出nan值，导致不能强行抢过电机控制权；缺点：可能操作有点反人类）
+ * 2.控制q1长度和l3角度，算三角函数得到电机位置（优点：手感比1好一丢丢；缺点：不太容易炸，但是也会炸，比如说两杆水平之后咋整？三角函数也是很容易算出来nan的，目前还没有很好的解决方法）
+ * 3.控制x,y,逆运动学结算（优点：操作可能理论上直觉上比较正常；缺点：容易炸，算不出来的话只能抢鼠标或者切换第一个模式）
+ * 受不了了，上面的可能都会写一遍
+ */
+//void Arms_Keyboard_Drive(Three_D_Arm_t *Arm_t, int32_t l3_Increment, int32_t Horizontal_Angle_Increment, int16_t roll, int16_t yaw,int16_t forward,bool_t update_sucker_state) {
+//    //cal arccos for pitch
+//    float l1_square ;
+//    float l2_square ;
+//    float l3_square ;
+//    arm_power_f32(&Arm_t->l1, 1, &l1_square);
+//    arm_power_f32(&Arm_t->l2, 1, &l2_square);
+//    arm_power_f32(&Arm_t->l3, 1, &l3_square);
+
+//    Arm_t->Pitch1_Angle = acosf((l1_square + l3_square - l2_square) / (2 * Arm_t->l1 * Arm_t->l2)) + Arm_t->l3ToHorizontalPlane_Angle;
+//    Arm_t->Pitch2_Angle = acosf((l1_square + l2_square - l3_square) / (2 * Arm_t->l1 * Arm_t->l2));
+//    //TODO:output
+
+
+//    PidCalculate(&Arm_t->Forward_Motor.SPID, forward*(-10), Arm_t->Forward_Motor.Encoder->Speed[1]);
+
+//    //控制横移部分
+//    //    PidCalculate(&Arm_t->Traverse_Motor.SPID, traverse * 200, Arm_t->Traverse_Motor.Encoder->Speed[1]);
+
+//    if (pitch!=0) Arm_t->Pitch_LockPosition = Arm_t->Pitch_Motor.Encoder->Encode_Record_Val + pitch;
+
+//    motor_position_speed_control(&Arm_t->Pitch_Motor.SPID,
+//                                 &Arm_t->Pitch_Motor.PPID,
+//                                 Arm_t->Pitch_LockPosition,
+//                                 Arm_t->Pitch_Motor.Encoder->Encode_Record_Val,
+//                                 Arm_t->Pitch_Motor.Encoder->Speed[1]);
+
+//    if(roll!=0)Arm_t-> Roll_LockPosition = Arm_t->Roll_Motor.Encoder->Encode_Record_Val + roll;
+
+//    motor_position_speed_control(&Arm_t->Roll_Motor.SPID,
+//                                 &Arm_t->Roll_Motor.PPID,
+//                                 Arm_t->Roll_LockPosition,
+//                                 Arm_t->Roll_Motor.Encoder->Encode_Record_Val,
+//                                 Arm_t->Roll_Motor.Encoder->Speed[1]);
+
+//    //    if(yaw!=0) Yaw_LockPosition  += yaw / 660.0f * 8192.0f / 360.0f * 4.0f;
+//    if(yaw!=0) Arm_t->Yaw_LockPosition  = Arm_t->Yaw_Motor.Encoder->Encode_Record_Val+yaw ;
+
+//    motor_position_speed_control(&Arm_t->Yaw_Motor.SPID,
+//                                 &Arm_t->Yaw_Motor.PPID,
+//                                 Arm_t->Yaw_LockPosition,
+//                                 Arm_t->Yaw_Motor.Encoder->Encode_Record_Val,
+//                                 Arm_t->Yaw_Motor.Encoder->Speed[1]);
+
+//    //	see_T_yaw = (Arm_t->Yaw_Motor.Encoder->Encode_Record_Val - Arm_t->Yaw_LockPosition) / 57.295779513f * k1 - (Arm_t->Yaw_Motor.Encoder->Speed[1]*3.14159f/30.0f) * k2  ;
+//    //   see_current_yaw = see_T_yaw / 0.741f * 10000;
+//    //   Arm_t->Yaw_Motor.SPID.out = (see_current_yaw - 128.3507f) / 0.7778f;
+//    //   Arm_t->Yaw_Motor.SPID.out = abs_limit(Arm_t->Yaw_Motor.SPID.out,29000);
+
+
+//    //    speed=Arm_t->Roll_Motor.Encoder->Speed[1];
+//    //    MotorVelocityCurve(&Arm_t->Roll_Motor);
+
+//    CAN1_C620_OR_C610_205_TO_208_SendMsg(Arm_t->Pitch_Motor.SPID.out, Arm_t->Roll_Motor.SPID.out, Arm_t->Yaw_Motor.SPID.out, 0);
+//    CAN1_GM6020_5_TO_8_SendMsg(Arm_t->Yaw_Motor.SPID.out, 0, 0, 0);
+
+
+//    //pwm输出
+//    Arm_t->SecondPitch_Pwm_Cmp+=joint/60;
+//    if (Arm_t->SecondPitch_Pwm_Cmp>PWM_CMP_UPPER_LIMIT)Arm_t->SecondPitch_Pwm_Cmp=PWM_CMP_UPPER_LIMIT;
+//    else if(Arm_t->SecondPitch_Pwm_Cmp<PWM_CMP_LOWER_LIMIT)Arm_t->SecondPitch_Pwm_Cmp=PWM_CMP_LOWER_LIMIT;
+//    __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, Arm_t->SecondPitch_Pwm_Cmp);
+
+//}
+
 
 //unused area
 //函数指针，根据枚举来选
 //void (*pCalCurve[])(CurveObjectType *curve)={CalCurveNone,CalCurveTRAP,CalCurveSPTA};
 /*S型曲线速度计算*/
-static void CalCurveSPTA(Motor_t *spta)
-{
-    float power=0.0;
-    float speed=0.0;
-    //2t-Tmax/Tmax
-    power = (2 * ((float) spta->aTimes) - ((float) spta->maxTimes)) / ((float) spta->maxTimes);
-    //-flex(2t-Tmax/Tmax)
-    power = (0.0 - spta->flexible) * power;
-    //1+e^(-flex(2t-Tmax/Tmax))
-    speed=1+expf(power);
-    //(Vtarget-Vstart)/(1+e^(-flex(2t-Tmax/Tmax)))
-    speed=(spta->targetSpeed-spta->startSpeed)/speed;
-    spta->currentSpeed=speed+spta->startSpeed;
+//static void CalCurveSPTA(Motor_t *spta)
+//{
+//    float power=0.0;
+//    float speed=0.0;
+//    //2t-Tmax/Tmax
+//    power = (2 * ((float) spta->aTimes) - ((float) spta->maxTimes)) / ((float) spta->maxTimes);
+//    //-flex(2t-Tmax/Tmax)
+//    power = (0.0 - spta->flexible) * power;
+//    //1+e^(-flex(2t-Tmax/Tmax))
+//    speed=1+expf(power);
+//    //(Vtarget-Vstart)/(1+e^(-flex(2t-Tmax/Tmax)))
+//    speed=(spta->targetSpeed-spta->startSpeed)/speed;
+//    spta->currentSpeed=speed+spta->startSpeed;
 
-    if(spta->currentSpeed>spta->speedMax)
-    {
-        spta->currentSpeed=spta->speedMax;
-    }
+//    if(spta->currentSpeed>spta->speedMax)
+//    {
+//        spta->currentSpeed=spta->speedMax;
+//    }
 
-    if(spta->currentSpeed<spta->speedMin)
-    {
-        spta->currentSpeed=spta->speedMin;
-    }
+//    if(spta->currentSpeed<spta->speedMin)
+//    {
+//        spta->currentSpeed=spta->speedMin;
+//    }
 
-}
-/* 电机曲线加减速操作-------------------------------------------------------- */
-void MotorVelocityCurve(Motor_t *curve)
-{
-    curve->currentSpeed = (float )curve->Encoder->Speed[1];
-    float temp=0;
-    //如果速度>折返
-    if(curve->targetSpeed>curve->speedMax)
-    {
-        curve->targetSpeed=curve->speedMax;
-    }
+//}
+///* 电机曲线加减速操作-------------------------------------------------------- */
+//void MotorVelocityCurve(Motor_t *curve)
+//{
+//    curve->currentSpeed = (float )curve->Encoder->Speed[1];
+//    float temp=0;
+//    //如果速度>折返
+//    if(curve->targetSpeed>curve->speedMax)
+//    {
+//        curve->targetSpeed=curve->speedMax;
+//    }
 
-    if(curve->targetSpeed<curve->speedMin)
-    {
-        curve->targetSpeed=curve->speedMin;
-    }
-    //当前和初始速度绝对值小于加速度
-    if((fabs(curve->currentSpeed-curve->startSpeed)<=curve->stepSpeed)&&(curve->maxTimes==0))    {
-        if(curve->startSpeed<curve->speedMin)
-        {
-            curve->startSpeed=curve->speedMin;
-        }
+//    if(curve->targetSpeed<curve->speedMin)
+//    {
+//        curve->targetSpeed=curve->speedMin;
+//    }
+//    //当前和初始速度绝对值小于加速度
+//    if((fabs(curve->currentSpeed-curve->startSpeed)<=curve->stepSpeed)&&(curve->maxTimes==0))    {
+//        if(curve->startSpeed<curve->speedMin)
+//        {
+//            curve->startSpeed=curve->speedMin;
+//        }
 
-        temp=fabs(curve->targetSpeed-curve->startSpeed);
-        temp=temp/curve->stepSpeed;
-        curve->maxTimes=(uint32_t)(temp)+1;
-        curve->aTimes=0;
-    }
+//        temp=fabs(curve->targetSpeed-curve->startSpeed);
+//        temp=temp/curve->stepSpeed;
+//        curve->maxTimes=(uint32_t)(temp)+1;
+//        curve->aTimes=0;
+//    }
 
-    if(curve->aTimes<curve->maxTimes)
-    {
-        CalCurveSPTA(curve);
-        curve->aTimes++;
-    }
-    else
-    {
-        curve->currentSpeed=curve->targetSpeed;
-        curve->maxTimes=0;
-        curve->aTimes=0;
-    }
-    PidCalculate(&curve->SPID, curve->currentSpeed, curve->Encoder->Speed[1]);
-}
+//    if(curve->aTimes<curve->maxTimes)
+//    {
+//        CalCurveSPTA(curve);
+//        curve->aTimes++;
+//    }
+//    else
+//    {
+//        curve->currentSpeed=curve->targetSpeed;
+//        curve->maxTimes=0;
+//        curve->aTimes=0;
+//    }
+//    PidCalculate(&curve->SPID, curve->currentSpeed, curve->Encoder->Speed[1]);
+//}
 

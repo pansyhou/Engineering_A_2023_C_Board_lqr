@@ -56,10 +56,10 @@ RM = C:\Jetbrain\apps\CLion\ch-0\231.8109.174\bin\cmake\win\x64\bin\cmake.exe -E
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\16771\Desktop\Engineering_A_2023_C_Board (1)"
+CMAKE_SOURCE_DIR = C:\Users\16771\Desktop\Engineering2023_MatchCode\Engineering_A_2023_C_Board
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\16771\Desktop\Engineering_A_2023_C_Board (1)\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\16771\Desktop\Engineering2023_MatchCode\Engineering_A_2023_C_Board\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\16771\Desktop\Engineering_A_2023_C_Board (1)\cmake-build-debug\CMakeFiles" "C:\Users\16771\Desktop\Engineering_A_2023_C_Board (1)\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16771\Desktop\Engineering2023_MatchCode\Engineering_A_2023_C_Board\cmake-build-debug\CMakeFiles C:\Users\16771\Desktop\Engineering2023_MatchCode\Engineering_A_2023_C_Board\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\16771\Desktop\Engineering_A_2023_C_Board (1)\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16771\Desktop\Engineering2023_MatchCode\Engineering_A_2023_C_Board\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

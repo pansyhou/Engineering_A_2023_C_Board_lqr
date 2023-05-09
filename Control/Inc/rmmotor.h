@@ -46,17 +46,17 @@ typedef __packed struct
 	float torque;   //力矩
 	//还在想，电机还能封装什么方法进去
 	//TODO:
-
-    float startSpeed;//开始调速时的初始速度
-    float targetSpeed;   //目标速度
-    float stepSpeed;    //加速度
-    float speedMax;     //最大速度
-    float speedMin;     //最小速度
-    float currentSpeed;//当前速度
-    uint32_t aTimes;    //调速时间
-    uint32_t maxTimes;   //调速跨度
-    SpeedCurveType curveMode;  //曲线类型
-    float flexible;     //S曲线拉伸度
+//
+//    float startSpeed;//开始调速时的初始速度
+//    float targetSpeed;   //目标速度
+//    float stepSpeed;    //加速度
+//    float speedMax;     //最大速度
+//    float speedMin;     //最小速度
+//    float currentSpeed;//当前速度
+//    uint32_t aTimes;    //调速时间
+//    uint32_t maxTimes;   //调速跨度
+//    SpeedCurveType curveMode;  //曲线类型
+//    float flexible;     //S曲线拉伸度
 }Motor_t;
 
 /**************函数声明**************/

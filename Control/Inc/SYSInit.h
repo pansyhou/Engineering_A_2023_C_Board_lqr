@@ -9,6 +9,11 @@
 #define PWM_CMP_UPPER_LIMIT 2500
 #define PWM_CMP_LOWER_LIMIT 500
 
+#define Pitch_Motor_Encoder_ID 0x01
+
+#define Pitch_Servo_LOWER_ANGLE 18.1948891f
+#define Pitch_Servo__ANGLE 36.389618f
+
 /*  系统头文件 */
 #include <stdlib.h>
 #include <stdio.h>

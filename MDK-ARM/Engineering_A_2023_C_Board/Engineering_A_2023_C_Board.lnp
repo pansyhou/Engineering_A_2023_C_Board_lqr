@@ -38,6 +38,7 @@
 "engineering_a_2023_c_board\maths.o"
 "engineering_a_2023_c_board\pid.o"
 "..\Middlewares\ST\ARM\DSP\Lib\arm_cortexM4lf_math.lib"
+"..\Middlewares\ST\ARM\DSP\Lib\arm_cortexM4l_math.lib"
 "engineering_a_2023_c_board\bmi088driver.o"
 "engineering_a_2023_c_board\bmi088middleware.o"
 "engineering_a_2023_c_board\bsp_dwt.o"

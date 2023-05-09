@@ -27,11 +27,12 @@ void Sys_Init(void)
 //	DWT->CYCCNT = 0;
 //	DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
 #endif
-	DWT_Init(168);
-  while (BMI088_init(&hspi1, 1) != BMI088_NO_ERROR);
+//	DWT_Init(168);
+//  while (BMI088_init(&hspi1, 1) != BMI088_NO_ERROR);
     ECF_CAN_Init();
 	//遥控初始化
 	Remote_Data_Init();
+
     //蜂鸣器
 //	HAL_TIM_Base_Start(&htim4);
 //	HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);

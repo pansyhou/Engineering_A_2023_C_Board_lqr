@@ -17,19 +17,50 @@ Library Manager: ArmAr.exe V5.06 update 7 (build 960)
 Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
 CPU DLL:         SARMCM3.DLL V5.38.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      Segger\JL2CM3.dll V2.99.42.0
+Target DLL:      CMSIS_AGDI.dll V1.33.15.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\16771\Desktop\Engineering_A_2023_C_Board (1)\MDK-ARM\Engineering_A_2023_C_Board.uvprojx
-Project File Date:  04/30/2023
+C:\Users\16771\Desktop\Engineering2023_MatchCode\Engineering_A_2023_C_Board\MDK-ARM\Engineering_A_2023_C_Board.uvprojx
+Project File Date:  05/03/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Engineering_A_2023_C_Board'
-FCARM - Output Name not specified, please check 'Options for Target - Utilities'
-Target not created.
-Build Time Elapsed:  00:00:00
+Note: source file '..\IMU\bsp_PWM.c' - object file renamed from 'Engineering_A_2023_C_Board\bsp_PWM.o' to 'Engineering_A_2023_C_Board\bsp_pwm_1.o'.
+compiling GimbalMotor.c...
+..\Control\Src\GimbalMotor.c(287): warning:  #177-D: variable "see_T_yaw"  was declared but never referenced
+      fp32 see_T_yaw,see_current_yaw;
+..\Control\Src\GimbalMotor.c(287): warning:  #177-D: variable "see_current_yaw"  was declared but never referenced
+      fp32 see_T_yaw,see_current_yaw;
+..\Control\Src\GimbalMotor.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=48040 RO-data=3144 RW-data=640 ZI-data=47968  
+FromELF: creating hex file...
+"Engineering_A_2023_C_Board\Engineering_A_2023_C_Board.axf" - 0 Error(s), 2 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Engineering_A_2023_C_Board
+  C:/Users/16771/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/16771/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

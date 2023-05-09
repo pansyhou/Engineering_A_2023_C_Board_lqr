@@ -88,6 +88,7 @@ typedef  struct
     Motor_t Roll_Motor; //roll轴 /z轴3508电机
     Motor_t Yaw_Motor;  //yaw轴/y轴3508电机
     Motor_t Forward_Motor;    //前伸电机 3508电机
+    Encoder_t *Pitch_Motor_Encoder;//pitch轴 用于初始化的绝对值编码器
     bool_t Suker_state; //吸盘状态
     int32_t Pitch_LockPosition;
     int32_t Roll_LockPosition;

@@ -66,7 +66,7 @@ void ECF_PWM_50HZ_Output_Init(TIM_HandleTypeDef *htim, int8_t TIM_Channel , int3
     assert_param(IS_TIM_CCX_INSTANCE(htim, TIM_Channel));
     HAL_TIM_Base_Start(htim);
     HAL_TIM_PWM_Start(htim,TIM_Channel);
-    __HAL_TIM_SetCompare(htim, TIM_Channel, 0);
+    __HAL_TIM_SetCompare(htim, TIM_Channel, cmp);
 }
 
 
