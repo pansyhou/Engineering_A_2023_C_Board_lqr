@@ -23,7 +23,6 @@
  * @endverbatim
  ************************** Dongguan-University of Technology -ACE***************************/
 #include "GimbalMotor.h"
-#include "bsp_buzzer.h"
 #include "bsp_can.h"
 #include "bsp_pwm.h"
 #include "pid.h"
@@ -37,18 +36,34 @@ Grasp_t Grasp;
 can_std_msg Gimbal_Can_msg;
 const INS_t *IMU;
 
+#ifdef configUSE_C_Board|configUSE_F4
 void MotorDataDeal(CAN_RxHeaderTypeDef *header, uint8_t *data);
+#endif
+
 Grasp_t *Return_Grasp_t_Pointer(void) {
     return &Grasp;
 }
 
-
+#ifdef configUSE_C_Board | configUSE_F4
 /**
  *  这个函数用于CAN中断调用的数据处理函数，已经在CAN_Drive注册了
  * @param header
  * @param data
  */
 void MotorDataDeal(CAN_RxHeaderTypeDef *header, uint8_t *data) {
+#endif
+
+#ifdef configUSE_H7
+void MotorDataDeal(FDCAN_HandleTypeDef *hfdcan){
+    //rx header structure
+    FDCAN_RxHeaderTypeDef rx_message;
+
+    uint8_t Rx_Data[8];
+    if (HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &rx_message, Rx_Data) != HAL_OK)continue;
+    //restart notification
+    HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
+    switch (rx_message.Identifier){
+#endif
     /**
      * 资源分配愿景
      * 机械臂部分roll、pitch、traverse三个要占用0x200的
@@ -68,7 +83,9 @@ void MotorDataDeal(CAN_RxHeaderTypeDef *header, uint8_t *data) {
       * 8 横移2006
       * 9 yaw6020
       */
+#ifdef configUSE_C_Board|configUSE_F4
     switch (header->StdId) {
+#endif
         case Pitch_Motor_Encoder_ID:{
             CAN_DATA_Encoder_Deal(((int32_t)data[3]|(int32_t)data[4]<<8|(int32_t)data[5]<<16|(int32_t)data[6]<<24),0,9);
         } break ;

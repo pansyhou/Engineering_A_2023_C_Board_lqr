@@ -36,6 +36,7 @@ void Remote_Task(void *pvParameters)
         Remote_Data_Deal();
         CAN_A2B_RC_Send();
         vTaskDelay(5);
-
+				CAN1_C620_OR_C610_201_TO_204_SendMsg(500,500,500,500);
+				CAN1_C620_OR_C610_205_TO_208_SendMsg(500,500,500,500);
     }
 }

@@ -124,7 +124,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fdiagnostics-color=always"
+					"fragment" : "-fdiagnostics-color=always"
 				},
 				{
 					"backtrace" : 6,
@@ -378,9 +378,6 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
-				},
-				{
 					"backtrace" : 6,
 					"fragment" : "-mfloat-abi=hard"
 				},
@@ -556,10 +553,6 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
 				"fragment" : "",
 				"role" : "flags"
 			},
@@ -641,6 +634,11 @@
 			{
 				"backtrace" : 5,
 				"fragment" : "ACE-ECF/Bsp/Inc/Ina226.h",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "BoardConfig.h",
 				"role" : "flags"
 			}
 		],
@@ -840,7 +838,8 @@
 				181,
 				182,
 				183,
-				185
+				185,
+				186
 			]
 		},
 		{
@@ -1868,6 +1867,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "ACE-ECF/Bsp/Inc/Ina226.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "BoardConfig.h",
 			"sourceGroupIndex" : 1
 		}
 	],

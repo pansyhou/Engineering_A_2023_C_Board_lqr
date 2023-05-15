@@ -29,6 +29,7 @@ void Sys_Init(void)
 #endif
 //	DWT_Init(168);
 //  while (BMI088_init(&hspi1, 1) != BMI088_NO_ERROR);
+    ECF_RC_Init();
     ECF_CAN_Init();
 	//遥控初始化
 	Remote_Data_Init();
@@ -37,6 +38,6 @@ void Sys_Init(void)
 //	HAL_TIM_Base_Start(&htim4);
 //	HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
 //
-    //	Sensor_RX_Init();
+//	Sensor_RX_Init();
 //	vTaskDelay(100);
 }

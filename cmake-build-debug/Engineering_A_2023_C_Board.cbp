@@ -11,10 +11,10 @@
 				<Option working_dir="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Engineering_A_2023_C_Board.elf">
@@ -50,18 +50,18 @@
 					<Add directory="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/USB_DEVICE/Target"/>
 					<Add directory="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
 					<Add directory="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engineering_A_2023_C_Board.elf"/>
-					<CompileFile command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engineering_A_2023_C_Board.elf"/>
+					<CompileFile command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Engineering_A_2023_C_Board.elf/fast">
@@ -97,38 +97,38 @@
 					<Add directory="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/USB_DEVICE/Target"/>
 					<Add directory="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
 					<Add directory="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
-					<Add directory="e:\application\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="c:\armgcc\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engineering_A_2023_C_Board.elf/fast"/>
-					<CompileFile command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engineering_A_2023_C_Board.elf/fast"/>
+					<CompileFile command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Jetbrain/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -151,6 +151,9 @@
 			<Option target="Engineering_A_2023_C_Board.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/ACE-ECF/Bsp/Src/Ina226.c">
+			<Option target="Engineering_A_2023_C_Board.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/BoardConfig.h">
 			<Option target="Engineering_A_2023_C_Board.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/16771/Desktop/Engineering2023_MatchCode/Engineering_A_2023_C_Board/Bsp/Inc/bsp_Power_Detect.h">

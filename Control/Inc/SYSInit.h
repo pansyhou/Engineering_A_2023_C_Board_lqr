@@ -1,6 +1,11 @@
 #ifndef __SYS_INIT_H
 #define __SYS_INIT_H
 
+//#define configUSE_F4
+#define configUSE_C_Board
+//#define configUSE_H7
+
+
 //global variable
 #define ARM_L1_LENTH 23.0f
 #define ARM_L2_LENTH 23.0f
@@ -12,7 +17,7 @@
 #define Pitch_Motor_Encoder_ID 0x01
 
 #define Pitch_Servo_LOWER_ANGLE 18.1948891f
-#define Pitch_Servo__ANGLE 36.389618f
+#define Pitch_Servo__ANGLE 36.389618fe
 
 /*  系统头文件 */
 #include <stdlib.h>

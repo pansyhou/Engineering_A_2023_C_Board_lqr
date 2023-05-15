@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "E:/Application/10 2021.10/bin/arm-none-eabi-gcc.exe")
+set(CMAKE_C_COMPILER "C:/armgcc/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "10.3.1")
@@ -22,10 +22,10 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 set(CMAKE_AR "arm-none-eabi-ar")
-set(CMAKE_C_COMPILER_AR "E:/Application/10 2021.10/bin/arm-none-eabi-gcc-ar.exe")
-set(CMAKE_RANLIB "E:/Application/10 2021.10/bin/arm-none-eabi-ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "E:/Application/10 2021.10/bin/arm-none-eabi-gcc-ranlib.exe")
-set(CMAKE_LINKER "E:/Application/10 2021.10/bin/arm-none-eabi-ld.exe")
+set(CMAKE_C_COMPILER_AR "C:/armgcc/bin/arm-none-eabi-gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "C:/armgcc/bin/arm-none-eabi-gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Users/16771/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "E:/Application/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include;E:/Application/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;E:/Application/10 2021.10/arm-none-eabi/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/armgcc/lib/gcc/arm-none-eabi/10.3.1/include;C:/armgcc/lib/gcc/arm-none-eabi/10.3.1/include-fixed;C:/armgcc/arm-none-eabi/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

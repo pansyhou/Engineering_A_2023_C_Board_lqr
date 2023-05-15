@@ -80,7 +80,7 @@ file(GLOB_RECURSE SOURCES "USB_DEVICE/*.*" "startup/*.*" "Middlewares/*.*" "Driv
 #        "ACE-ECF/Bsp/Src/*.*"
         "ACE-ECF/Algorithm/src/*.*")
 
-set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F407IGHx_FLASH.ld Control/Src/AutoAction.c Control/Inc/AutoAction.h Bsp/Src/bsp_pwm.c Bsp/Inc/bsp_pwm.h Bsp/Src/bsp_Power_Detect.c Bsp/Inc/bsp_Power_Detect.h ACE-ECF/Bsp/Src/Ina226.c ACE-ECF/Bsp/Src/Ina226.c ACE-ECF/Bsp/Inc/Ina226.h ACE-ECF/Bsp/Inc/Ina226.h)
+set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F407IGHx_FLASH.ld Control/Src/AutoAction.c Control/Inc/AutoAction.h Bsp/Src/bsp_pwm.c Bsp/Inc/bsp_pwm.h Bsp/Src/bsp_Power_Detect.c Bsp/Inc/bsp_Power_Detect.h ACE-ECF/Bsp/Src/Ina226.c ACE-ECF/Bsp/Src/Ina226.c ACE-ECF/Bsp/Inc/Ina226.h ACE-ECF/Bsp/Inc/Ina226.h BoardConfig.h)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
 add_link_options(-mcpu=cortex-m4 -mthumb -mthumb-interwork)

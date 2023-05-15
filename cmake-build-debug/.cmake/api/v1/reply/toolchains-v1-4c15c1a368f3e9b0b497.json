@@ -7,7 +7,7 @@
 			{
 				"id" : "GNU",
 				"implicit" : {},
-				"path" : "E:/Application/10 2021.10/bin/arm-none-eabi-gcc.exe",
+				"path" : "C:/armgcc/bin/arm-none-eabi-gcc.exe",
 				"version" : ""
 			},
 			"language" : "ASM",
@@ -26,15 +26,15 @@
 				{
 					"includeDirectories" : 
 					[
-						"E:/Application/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include",
-						"E:/Application/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed",
-						"E:/Application/10 2021.10/arm-none-eabi/include"
+						"C:/armgcc/lib/gcc/arm-none-eabi/10.3.1/include",
+						"C:/armgcc/lib/gcc/arm-none-eabi/10.3.1/include-fixed",
+						"C:/armgcc/arm-none-eabi/include"
 					],
 					"linkDirectories" : [],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
-				"path" : "E:/Application/10 2021.10/bin/arm-none-eabi-gcc.exe",
+				"path" : "C:/armgcc/bin/arm-none-eabi-gcc.exe",
 				"version" : "10.3.1"
 			},
 			"language" : "C",
@@ -52,18 +52,18 @@
 				{
 					"includeDirectories" : 
 					[
-						"E:/Application/10 2021.10/arm-none-eabi/include/c++/10.3.1",
-						"E:/Application/10 2021.10/arm-none-eabi/include/c++/10.3.1/arm-none-eabi",
-						"E:/Application/10 2021.10/arm-none-eabi/include/c++/10.3.1/backward",
-						"E:/Application/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include",
-						"E:/Application/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed",
-						"E:/Application/10 2021.10/arm-none-eabi/include"
+						"C:/armgcc/arm-none-eabi/include/c++/10.3.1",
+						"C:/armgcc/arm-none-eabi/include/c++/10.3.1/arm-none-eabi",
+						"C:/armgcc/arm-none-eabi/include/c++/10.3.1/backward",
+						"C:/armgcc/lib/gcc/arm-none-eabi/10.3.1/include",
+						"C:/armgcc/lib/gcc/arm-none-eabi/10.3.1/include-fixed",
+						"C:/armgcc/arm-none-eabi/include"
 					],
 					"linkDirectories" : [],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
-				"path" : "E:/Application/10 2021.10/bin/arm-none-eabi-g++.exe",
+				"path" : "C:/armgcc/bin/arm-none-eabi-g++.exe",
 				"version" : "10.3.1"
 			},
 			"language" : "CXX",
